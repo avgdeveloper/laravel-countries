@@ -21,8 +21,10 @@ return new class extends Migration
             $table->timestamps();
         });
 
+        $hashed_password = Hash::make('Aa123456');
+
         DB::table('users')->insert([
-            ['name' => 'admin', 'email' => 'admin@medisonmedia.com', 'password' => '$2y$10$IzzSyMNkm6e1VGidtdywE.FQnPcn0myXVrW/.mtKo0FLKz89F8IIm'],
+            ['name' => 'admin', 'email' => 'admin@medisonmedia.com', 'password' => "$hashed_password"],
         ]);
     }
 
