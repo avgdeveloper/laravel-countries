@@ -20,6 +20,10 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        DB::table('users')->insert([
+            ['name' => 'admin', 'email' => 'admin@medisonmedia.com', 'password' => '$2y$10$IzzSyMNkm6e1VGidtdywE.FQnPcn0myXVrW/.mtKo0FLKz89F8IIm'],
+        ]);
     }
 
     /**
