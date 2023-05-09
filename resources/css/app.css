@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.save-btn {
+    float: right;
+}
+.edit-btn {
+    background-color: #0d6efd;
+}
+.close-btn {
+    background-color: #6c757d;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
