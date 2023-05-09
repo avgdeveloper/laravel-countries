@@ -20,9 +20,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [CountryController::class, 'index'])
-    ->middleware(['auth', 'verified'])->name('dashboard');
+    ->middleware(['auth', 'verified','IpCheck'])->name('dashboard');
 
-Route::middleware('auth')->group(function (){
+Route::middleware('auth','IpCheck')->group(function (){
     // Route::get('/', [CountryController::class, 'index'])->name('dashboard');
     Route::get('/', [CountryController::class, 'index']);
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
